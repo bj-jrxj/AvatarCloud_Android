@@ -5,6 +5,7 @@
   <groupId>com.jrxj.avatar</groupId>
   <artifactId>avatarcloud</artifactId>
   <version>1.0.1</version>
+  <packaging>aar</packaging>
   <dependencies>
     <dependency>
       <groupId>org.jetbrains.kotlin</groupId>
