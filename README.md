@@ -60,7 +60,6 @@ AvatarSelectClient.registerAvatarSelect(this, "appID", "secretID");
  AvatarSelector.create(this)
                         .setShapeType(AvatarConfig.AVATAR_SHAPE_CIRCLE_CODE)
                         .setShapeRadius(defaultBean.radius)
-                        .isSaveAlbum(false)
                         .setBearingView(imageView)
                         .forResult(data -> {
                             selectData = data;
