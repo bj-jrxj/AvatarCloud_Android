@@ -13,6 +13,12 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
+      <groupId>com.github.LuckSiege.PictureSelector</groupId>
+      <artifactId>picture_library</artifactId>
+      <version>v2.6.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
       <groupId>androidx.multidex</groupId>
       <artifactId>multidex</artifactId>
       <version>2.0.0</version>
@@ -214,12 +220,6 @@
       <groupId>de.hdodenhof</groupId>
       <artifactId>circleimageview</artifactId>
       <version>3.1.0</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.github.LuckSiege.PictureSelector</groupId>
-      <artifactId>picture_library</artifactId>
-      <version>v2.6.0</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
