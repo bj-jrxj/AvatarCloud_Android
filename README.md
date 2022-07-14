@@ -39,7 +39,7 @@ allprojects {
 app build.gradle添加如下
 
 dependencies {
-        implementation('com.jrxj.avatar:avatarcloud:1.0.1@aar') {transitive = true }
+        implementation('com.jrxj.avatar:avatarcloud:1.0.0@aar') {transitive = true }
 }
 
 ```
@@ -50,7 +50,7 @@ dependencies {
 ###### 在项目Application中初始化
 
 ```
-AvatarSelectClient.registerAvatarSelect(this, "androidId", "aaa-ccc-vvv");
+AvatarSelectClient.registerAvatarSelect(this, "appID", "secretID");
 
 ```
 
@@ -60,7 +60,6 @@ AvatarSelectClient.registerAvatarSelect(this, "androidId", "aaa-ccc-vvv");
  AvatarSelector.create(this)
                         .setShapeType(AvatarConfig.AVATAR_SHAPE_CIRCLE_CODE)
                         .setShapeRadius(defaultBean.radius)
-                        .isSaveAlbum(false)
                         .setBearingView(imageView)
                         .forResult(data -> {
                             selectData = data;
