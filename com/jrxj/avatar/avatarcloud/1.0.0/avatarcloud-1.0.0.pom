@@ -221,6 +221,17 @@
       <artifactId>picture_library</artifactId>
       <version>v2.6.0</version>
       <scope>compile</scope>
+      <exclusions>
+
+                <exclusion>
+
+                    <groupId>com.github.LuckSiege.PictureSelector</groupId>
+
+                    <artifactId>picture_library</artifactId>
+
+                </exclusion>
+
+        </exclusions>
     </dependency>
     <dependency>
       <groupId>com.github.lihangleo2</groupId>
