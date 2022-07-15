@@ -57,7 +57,7 @@ allprojects {
 app build.gradle添加如下
 
 dependencies {
-        implementation('com.jrxj.avatar:avatarcloud:1.0.0@aar') {transitive = true }
+        implementation('com.jrxj.avatar:avatarcloud:1.0.0')
 }
 
 ```
