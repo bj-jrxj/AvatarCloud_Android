@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jrxj.avatar</groupId>
   <artifactId>avatarcloud</artifactId>
   <version>1.0.0</version>
+  <description>test</description>
   <dependencies>
     <dependency>
       <groupId>org.jetbrains.kotlin</groupId>
@@ -64,72 +64,6 @@
       <groupId>androidx.viewpager2</groupId>
       <artifactId>viewpager2</artifactId>
       <version>1.0.0</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.github.Justson.AgentWeb</groupId>
-      <artifactId>agentweb-core</artifactId>
-      <version>v5.0.0-alpha.1-androidx</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.github.Justson.AgentWeb</groupId>
-      <artifactId>agentweb-filechooser</artifactId>
-      <version>v5.0.0-alpha.1-androidx</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.github.Justson</groupId>
-      <artifactId>Downloader</artifactId>
-      <version>v5.0.0-androidx</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.github.razerdp</groupId>
-      <artifactId>BasePopup</artifactId>
-      <version>2.2.1</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.github.CymChad</groupId>
-      <artifactId>BaseRecyclerViewAdapterHelper</artifactId>
-      <version>2.9.50</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.github.hackware1993</groupId>
-      <artifactId>MagicIndicator</artifactId>
-      <version>1.5.0</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-csv</artifactId>
-      <version>1.9.0</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.uuddlrlrba</groupId>
-      <artifactId>close-pixelate</artifactId>
-      <version>1.2.0</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.noober.background</groupId>
-      <artifactId>core</artifactId>
-      <version>1.6.5</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.github.zhaokaiqiang.klog</groupId>
-      <artifactId>library</artifactId>
-      <version>1.6.0</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.github.bumptech.glide</groupId>
-      <artifactId>glide</artifactId>
-      <version>4.9.0</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
@@ -193,50 +127,63 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>com.tencent.bugly</groupId>
-      <artifactId>crashreport</artifactId>
-      <version>3.3.7</version>
+      <groupId>com.github.Justson.AgentWeb</groupId>
+      <artifactId>agentweb-core</artifactId>
+      <version>v5.0.0-alpha.1-androidx</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>com.tencent.bugly</groupId>
-      <artifactId>nativecrashreport</artifactId>
-      <version>3.8.0</version>
+      <groupId>com.github.Justson.AgentWeb</groupId>
+      <artifactId>agentweb-filechooser</artifactId>
+      <version>v5.0.0-alpha.1-androidx</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>io.github.youth5201314</groupId>
-      <artifactId>banner</artifactId>
-      <version>2.2.2</version>
+      <groupId>com.github.Justson</groupId>
+      <artifactId>Downloader</artifactId>
+      <version>v5.0.0-androidx</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>de.hdodenhof</groupId>
-      <artifactId>circleimageview</artifactId>
-      <version>3.1.0</version>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-csv</artifactId>
+      <version>1.9.0</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>com.github.LuckSiege.PictureSelector</groupId>
-      <artifactId>picture_library</artifactId>
-      <version>v2.6.0</version>
+      <groupId>com.github.razerdp</groupId>
+      <artifactId>BasePopup</artifactId>
+      <version>2.2.1</version>
       <scope>compile</scope>
-      <exclusions>
-
-                <exclusion>
-
-                    <groupId>com.github.LuckSiege.PictureSelector</groupId>
-
-                    <artifactId>picture_library</artifactId>
-
-                </exclusion>
-
-        </exclusions>
     </dependency>
     <dependency>
-      <groupId>com.github.lihangleo2</groupId>
-      <artifactId>ShadowLayout</artifactId>
-      <version>3.2.4</version>
+      <groupId>com.github.CymChad</groupId>
+      <artifactId>BaseRecyclerViewAdapterHelper</artifactId>
+      <version>2.9.50</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.hackware1993</groupId>
+      <artifactId>MagicIndicator</artifactId>
+      <version>1.5.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.noober.background</groupId>
+      <artifactId>core</artifactId>
+      <version>1.6.5</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.zhaokaiqiang.klog</groupId>
+      <artifactId>library</artifactId>
+      <version>1.6.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.bumptech.glide</groupId>
+      <artifactId>glide</artifactId>
+      <version>4.9.0</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
@@ -257,5 +204,12 @@
       <version>5.2.0</version>
       <scope>compile</scope>
     </dependency>
+    <dependency>
+      <groupId>io.github.youth5201314</groupId>
+      <artifactId>banner</artifactId>
+      <version>2.2.2</version>
+      <scope>compile</scope>
+    </dependency>
   </dependencies>
+  <packaging>aar</packaging>
 </project>
