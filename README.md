@@ -23,8 +23,8 @@
 |功能|SDK|下载地址|集成指引|
 |-|-|-------:|:------:|
 |云头像|iOS|https://github.com/bj-jrxj/AvatarCloud_iOS|[pod集成](#SDK集成)<br>[手动集成](#手动集成)|
-|云头像|Adnroid|https://github.com/bj-jrxj/AvatarCloud_Android|gradle集成|
-|云头像+一键登录|Adnroid|https://github.com/bj-jrxj/AvatarCloud_Android/blob/main/README16.md|gradle集成|
+|云头像|Android|https://github.com/bj-jrxj/AvatarCloud_Android|gradle集成|
+|云头像+一键登录|Android|https://github.com/bj-jrxj/AvatarCloud_Android/blob/main/README16.md|gradle集成|
 
 
 
