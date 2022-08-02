@@ -210,7 +210,7 @@ setAvatarGenCustomInterfaceListener | 设置切换登录方式的回调
 setSalognText | 设置salogn 文案
 setLogoDrawableId | 设置 显示图标的资源id
 
-#### 2.5.3. finish 授权页
+#### 2.5.2 finish 授权页
 SDK 完成回调后，不会立即关闭授权页面，需要开发者主动调用离开授权页面方 法去完成页面的关闭
 ```
 mAuthnHelper.quitAuthActivity()
