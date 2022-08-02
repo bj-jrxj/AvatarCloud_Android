@@ -1,4 +1,16 @@
 # 云头像一键登录
+
+
+|功能|SDK|下载地址|集成指引|
+|-|-|-------:|:------:|
+|云头像|iOS|https://github.com/bj-jrxj/AvatarCloud_iOS|[pod集成](#SDK集成)<br>[手动集成](#手动集成)|
+|云头像|Adnroid|https://github.com/bj-jrxj/AvatarCloud_Android|gradle集成|
+|云头像+一键登录|Adnroid|https://github.com/bj-jrxj/AvatarCloud_Android/blob/main/README16.md|gradle集成|
+
+
+
+
+
 ## 1. 开发环境配置
 注意事项:  
 1. 一键登录服务必须打开蜂窝数据流量并且手机操作系统给予应用蜂窝数 据权限才能使用  
