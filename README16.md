@@ -7,7 +7,7 @@
 |云头像|Android|https://github.com/bj-jrxj/AvatarCloud_Android|gradle集成|
 |云头像+一键登录|Android|https://github.com/bj-jrxj/AvatarCloud_Android/blob/main/README16.md|gradle集成|
 
-
+>云头像api请点击表格云头像版本查看。  
 
 
 
