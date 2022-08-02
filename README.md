@@ -130,14 +130,14 @@ AvatarSelectClient.registerAvatarSelect(this, "appID", "secretID");
 app build.gradle添加如下
 
 dependencies {
-        implementation('com.jrxj.avatar:avatarcloud:1.0.0.3')
+        implementation('com.jrxj.avatar:avatarcloud:1.0.0.6')
 }
 ```
-2.创建一个 AuthnHelper 实例
-  GenAuthnHelper 是 SDK 的功能入口，所有的接口调用都得通过 GenAuthnHelper 进行调用。因此，调用 SDK，首先需要创建一个 GenAuthnHelper 实例
+2.创建一个 AvatarGenAuthnHelper 实例
+  AvatarGenAuthnHelper 是 SDK 的功能入口，所有的接口调用都得通过 AvatarGenAuthnHelper 进行调用。因此，调用 SDK，首先需要创建一个 GenAuthnHelper 实例
 方法原型:
 ```
-mAuthnHelper = GenAuthnHelper.getInstance(mContext);
+mAuthnHelper = AvatarGenAuthnHelper.getInstance(mContext);
 
 ```
 3.实现回调
@@ -145,7 +145,7 @@ mAuthnHelper = GenAuthnHelper.getInstance(mContext);
 GenTokenListener 的实现示例代码如下:
 ```
 
-GenTokenListener mListener =
+AvatarGenTokenListener mListener =
 		new GenTokenListener() {
 		@Override
 		public void onGetTokenComplete(int SDKRequestCode, JSONObject jObj) {
@@ -176,10 +176,10 @@ public void onCreate(Bundle savedInstanceState) {
 	super.onCreate(savedInstanceState);
 	mContext = this;
 	......
-	mAuthnHelper = GenAuthnHelper.getInstance(mContext);
+	mAuthnHelper = AvatarGenAuthnHelper.getInstance(mContext);
 }
 //实现取号回调
-	mListener = new GenTokenListener() {
+	mListener = new AvatarGenTokenListener() {
 	@Override
 	public void onGetTokenComplete(int requestCode, JSONObject jObj) { 						............ // 应用接收到回调后的处理逻辑
 	}
@@ -219,8 +219,8 @@ traceId  String  主要用于定位问题
 #### 2.5.1 修改页面主题
 开发者可以通过 setAuthThemeConfig 方法修改授权页面主题
 方法原型:
-public void setAuthThemeConfig(AuthThemeConfig authThemeConfig)
-主题配置对象，由 GenAuthThemeConfig.Builder().build()创建，开发者通过对 builder 中 调用对应的方法配置授权页中对应的元素
+public void setAuthThemeConfig(AvatarGenAuthThemeConfig authThemeConfig)
+主题配置对象，由 AvatarGenAuthThemeConfig.Builder().build()创建，开发者通过对 builder 中 调用对应的方法配置授权页中对应的元素
 
 
 方法 | 说明
@@ -255,7 +255,7 @@ setPrivacyState|设置是否默认勾选复选框
 setPrivacyBookSymbol|设置书名号，0=设置，1=不设置，默认设置
 setCheckBoxLocation|设置复选框相对右侧协议文案居上或者居 中，默认居上。0-居上，1-居中
 setPrivacyAnimation|设置协议勾选框+协议文本的抖动动画效果， 默认无抖动。
-setGenCheckBoxListener|设置授权页勾选框和登录按钮的监听事件
+setAvatarGenCheckBoxListener|设置授权页勾选框和登录按钮的监听事件
 setGenCheckedChangeListener|设置授权页勾选框是否勾选的监听事件
 SetWebDomStorage|0:关闭;1:开启。默认关闭，可以通过方 法的设置来支持 dom storage。
 setAuthPageActIn|设置授权页进场动画
@@ -265,8 +265,10 @@ setAuthPageWindowOffset|设置授权页窗口 X 轴 Y 轴偏移
 setWindowBottom|设置授权页是否居于底部，0=居中;1=底部，设 置为 1Y 轴的偏移失效
 setThemeId|设置授权页弹窗主题，也可在 Manifest 设置
 setBackButton|弹窗授权页模式下，设置物理返回键是否有效， 默认有效。true=有效，false=无效。
-setGenBackPressedListener|设置授权页返回键监听事件
+setAvatarGenBackPressedListener|设置授权页返回键监听事件
 setAvatarGenCustomInterfaceListener | 设置切换登录方式的回调
+setSalognText | 设置salogn 文案
+setLogoDrawableId | 设置 显示图标的资源id
 
 #### 2.5.3. finish 授权页
 SDK 完成回调后，不会立即关闭授权页面，需要开发者主动调用离开授权页面方 法去完成页面的关闭
@@ -401,6 +403,11 @@ IP 地址，防止业务侧用户信息被盗用风险。IP 白名单目前同�
 方法调用后SDK会给出返回码，103000为成功，其余为调用失败。 建议应用捕捉这些返回码，可用于日常数据分析。
 * + 5 能力余量不足的问题?
  确定有充值的情况下，开放平台数据同步至认证SDK系统有约30分钟的延迟时间。
+
+
+
+
+
 
 
 
