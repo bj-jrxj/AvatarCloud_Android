@@ -36,6 +36,24 @@ dependencies {
         implementation('com.jrxj.avatar:avatarcloud:1.0.0.6')
 }
 ```
+###### 头像云平台申请**appID** 和 **secretID**
+
+在项目Application中初始化，初始化成功后才可以使用
+
+```
+AvatarSelectClient.registerAvatarSelect(this, Constant.APP_ID, Constant.APP_KEY, new AvatarSelectClient.InitAvatarListener() {
+
+                @Override
+                public void onSuccess() {
+
+                }
+
+                @Override
+                public void onError() {
+
+                }
+            });
+```
 2.创建一个 AvatarGenAuthnHelper 实例  
 AvatarGenAuthnHelper 是 SDK 的功能入口，所有的接口调用都得通过 AvatarGenAuthnHelper 进行调用。因此，调用 SDK，首先需要创建一个 AvatarGenAuthnHelper 实例  
 方法原型:
@@ -107,7 +125,7 @@ public void onCreate(Bundle savedInstanceState) {
 	} 
 };
 //调用取号方法
-mAuthnHelper.getPhoneInfo(Constant.APP_ID, Constant.APP_KEY, mListener, requestCode);
+mAuthnHelper.getPhoneInfo(mListener, requestCode);
 ```
 响应参数  
 OnGetTokenComplete 的参数 JSONObject，含义如下:
@@ -123,7 +141,7 @@ traceId | String | 主要用于定位问题
 授权请求方法原型  
 //调用一键登录方法
 ```
- mAuthnHelper.loginAuth(Constant.APP_ID, Constant.APP_KEY, mListener, requestCode);
+ mAuthnHelper.loginAuth(mListener, requestCode);
 
  mAuthnHelper.setPageInListener(new LoginPageInListener() {
             @Override
@@ -224,7 +242,7 @@ mAuthnHelper.quitAuthActivity()
 ### 3.1本机号码校验请求 token
 ```
 //调用本机号码校验方法
-mAuthnHelper.mobileAuth(APP_ID, APP_KEY, mListener, requestCode);
+mAuthnHelper.mobileAuth(mListener, requestCode);
 ```
 响应参数:
 OnGetTokenComplete 的参数 JSONObject，含义如下:
