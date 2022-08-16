@@ -15,7 +15,6 @@
 本平台所使用的头像及美术素材，均已签订协议并获得授权，平台内的头像可直接作为用户头像使用。如需二次编辑或衍生品开发，请联系[**云头像平台**](https://fc.faceface2.com)。
 
 
-
 * **具体内测申请流程请访问官网: https://fc.faceface2.com**
 
 
@@ -28,7 +27,14 @@
 |云头像+一键登录|Android|https://github.com/bj-jrxj/AvatarCloud_Android/blob/main/README16.md|gradle集成|
 
 
+### 需求痛点
+基本所有的应用都需要头像.  对于头像,大家的做法都是用户上传一张图片的方式, 如下图:
 
+![image](http://oss.faceface2.com/facecloud/pic/3ecaAa.jpeg)
+
+这样的体验方式,用户需要时刻在相册中保留一样图片,并记住在哪里.
+
+为什么没有一种方式,为用户提供很好看的头像, 直接让用户选择呢? 于是就有了该项目.
 
 
 
