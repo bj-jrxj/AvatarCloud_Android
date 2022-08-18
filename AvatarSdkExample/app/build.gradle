@@ -1,0 +1,131 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: "kotlin-kapt"
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.szjy.avatar.demo"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        multiDexEnabled true
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi-v7a', 'arm64-v8a'//, 'x86', 'armeabi-v7a', 'x86_64',
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+
+    signingConfigs { //签名配置
+
+        debugConfig { //debug版签名配置
+            keyAlias 'jrxj'
+            keyPassword 'qazwsx123'
+            storeFile file('jrxj.keystore')
+            storePassword 'qazwsx123'
+        }
+
+        releaseConfig { //发布版签名配置
+            keyAlias 'jrxj'
+            keyPassword 'qazwsx123'
+            storeFile file('jrxj.keystore')
+            storePassword 'qazwsx123'
+        }
+    }
+
+    buildTypes { // build类型
+        release { // 发布
+            // 签名
+            signingConfig signingConfigs.releaseConfig
+            // Zipalign优化
+            zipAlignEnabled false
+            // 混淆
+            minifyEnabled false
+            // 移除无用的resource文件
+            shrinkResources false
+            // 加载默认混淆配置文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+//            buildConfigField 'String', 'BASE_URL', BASE_URL_FORMAL
+        }
+        debug { // 调试
+            versionNameSuffix "-debug"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debugConfig
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+//            buildConfigField 'String', 'BASE_URL', BASE_URL_TEST
+        }
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            def dirs = ['main'
+            ]
+
+            dirs.each { dir ->
+                java.srcDir("src/$dir/java")
+                res.srcDir("src/$dir/res")
+                assets.srcDir("src/$dir/assets")
+            }
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "AvatarSdk_${buildType.name}_v${defaultConfig.versionName}_${buildTime()}.apk"
+        }
+    }
+}
+
+def buildTime() {
+    def date = new Date()
+    return date.format('yyyyMMdd_HHmm')
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+
+    implementation rootProject.ext.dependencies["multidex"]
+    implementation rootProject.ext.dependencies["appcompat"]
+    implementation rootProject.ext.dependencies["support-v4"]
+    implementation rootProject.ext.dependencies["design"]
+    implementation rootProject.ext.dependencies["annotations"]
+    implementation rootProject.ext.dependencies["recyclerview-v7"]
+    implementation rootProject.ext.dependencies["constraint-layout"]
+    implementation rootProject.ext.dependencies["cardview-v7"]
+    implementation rootProject.ext.dependencies["utilcode"]
+    implementation rootProject.ext.dependencies["immersionbar"]
+    implementation rootProject.ext.dependencies["immersionbar-components"]
+    implementation 'com.noober.background:core:1.6.5'
+    implementation 'com.github.lihangleo2:ShadowLayout:3.2.4'
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+    implementation rootProject.ext.dependencies["baseRecyclerViewAdapterHelper"]
+//    implementation project(':avatarlib')
+    implementation('com.jrxj.avatar:avatarcloud:1.0.0.7')
+}

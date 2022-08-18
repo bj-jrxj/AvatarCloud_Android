@@ -1,0 +1,142 @@
+ext {
+    android = [
+            compileSdkVersion: 30,
+            targetSdkVersion : 28,
+            minSdkVersion    : 21,
+
+            versionCode      : 1,
+            versionName      : '1.0.1',
+
+            VSupportSdk      : '29.0.0',
+            VRetrofitSdk     : "2.2.0",
+            VOkhttp          : "3.11.0",
+            VRxlifecycle     : "2.0.1",
+    ]
+
+    // App dependencies
+    dependencies = [
+            "appcompat"                    : 'androidx.appcompat:appcompat:1.2.0',
+            "support-v4"                   : 'androidx.legacy:legacy-support-v4:1.0.0',
+            "design"                       : 'com.google.android.material:material:1.0.0',
+            "annotations"                  : 'androidx.annotation:annotation:1.0.0',
+            "recyclerview-v7"              : 'androidx.recyclerview:recyclerview:1.0.0',
+
+            "multidex"                     : 'androidx.multidex:multidex:2.0.0',
+            "cardview-v7"                  : 'androidx.cardview:cardview:1.0.0',
+            "constraint-layout"            : 'androidx.constraintlayout:constraintlayout:1.1.3',
+
+            "butterknife"                  : "com.jakewharton:butterknife:10.2.2",
+            "butterknife-apt"              : "com.jakewharton:butterknife-compiler:10.2.2",
+            "eventbus"                     : "org.greenrobot:eventbus:3.1.1",
+            "glide"                        : "com.github.bumptech.glide:glide:4.9.0",
+            "glide-compiler"               : "com.github.bumptech.glide:compiler:4.9.0",
+            "picasso"                      : "com.squareup.picasso:picasso:2.5.2",
+            "xrecyclerview"                : "com.github.limedroid:ARecyclerView:v1.2.3",
+            "avi-loading"                  : "com.wang.avi:library:1.0.2",
+            "rxbus"                        : "com.blankj:rxbus:1.2",
+            "utilcode"                     : "com.blankj:utilcodex:1.31.0",
+            "okgo"                         : "com.lzy.net:okgo:3.0.4",
+            "okrx"                         : "com.lzy.net:okrx:1.0.2",
+            "okserver"                     : "com.lzy.net:okserver:2.0.5",
+            "immersionbar"                 : "com.gyf.immersionbar:immersionbar:3.0.0",
+            "immersionbar-components"      : "com.gyf.immersionbar:immersionbar-components:3.0.0",
+            "Luban"                        : "top.zibin:Luban:1.1.8",
+
+            "klog"                     : "com.github.zhaokaiqiang.klog:library:1.6.0",
+            "fastjson"                     : "com.alibaba:fastjson:1.2.60",
+            "gson"                         : "com.google.code.gson:gson:2.8.6",
+            "typeBuilder"                  : "com.github.ikidou:TypeBuilder:1.0",
+
+            "rxandroid"                    : "io.reactivex.rxjava2:rxandroid:2.0.1",
+            "rxjava"                       : "io.reactivex.rxjava2:rxjava:2.0.1",
+            "retrofit"                     : "com.squareup.retrofit2:retrofit:${android["VRetrofitSdk"]}",
+            "retrofit-converter-gson"      : "com.squareup.retrofit2:converter-gson:${android["VRetrofitSdk"]}",
+            "retrofit-adapter-rxjava"      : "com.squareup.retrofit2:adapter-rxjava2:${android["VRetrofitSdk"]}",
+            "okhttp3-logging-interceptor"  : "com.squareup.okhttp3:logging-interceptor:${android["VOkhttp"]}",
+            "okhttp3"                      : "com.squareup.okhttp3:okhttp:${android["VOkhttp"]}",
+            "rxlifecycle"                  : "com.trello.rxlifecycle2:rxlifecycle:${android["VRxlifecycle"]}",
+            "rxlifecycle-android"          : "com.trello.rxlifecycle2:rxlifecycle-android:${android["VRxlifecycle"]}",
+            "rxlifecycle-components"       : "com.trello.rxlifecycle2:rxlifecycle-components:${android["VRxlifecycle"]}",
+            "rxpermissions"                : "com.tbruyelle.rxpermissions2:rxpermissions:0.9.3@aar",
+
+            "canary-debug"                 : "com.squareup.leakcanary:leakcanary-android:1.4-beta2",
+            "canary-release"               : "com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2",
+
+
+            "discrete-seekbar"             : "org.adw.library:discrete-seekbar:1.0.1",
+
+            "bugly-sdk"                    : "com.tencent.bugly:crashreport:3.3.7",
+            "bugly-ndk"                    : "com.tencent.bugly:nativecrashreport:3.8.0",
+
+            "alicloud-android"             : 'com.aliyun.ams:alicloud-android-man:1.2.4',
+
+            "exoplayer"                    : "com.google.android.exoplayer:exoplayer-core:2.9.3",
+            "exoplayer2.9.1"               : 'com.google.android.exoplayer:exoplayer:2.9.1',
+            "jiaozivideoplayer"            : "cn.jzvd:jiaozivideoplayer:7.2.0",
+
+            "ijkplayer-java"               : 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8',
+            "ijkplayer-armv7a"             : 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.4',
+
+            "smartRefreshLayout"           : 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0',//1.0.5及以前版本的老用户升级需谨慎，API改动过大
+            "smartRefreshHeader"           : 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0', //没有使用特殊Header，可以不加这行
+
+            "lottie-animation"             : 'com.airbnb.android:lottie:2.7.0',
+            "advancedWebView"              : 'com.github.delight-im:Android-AdvancedWebView:v3.0.0',
+
+            "smartRefreshHorizontal"       : 'com.scwang.smartrefresh:SmartRefreshHorizontal:1.0.0-beta-1',
+            "baseRecyclerViewAdapterHelper": 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50',
+            "GroupedRecyclerViewAdapter"   : 'com.github.donkingliang:GroupedRecyclerViewAdapter:1.3.2',
+
+            "swipeDelMenuLayout"           : 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.2.2',
+
+            "kpswitch"                     : 'cn.dreamtobe.kpswitch:library:1.6.1',
+            "pickerView"                   : 'com.contrarywind:Android-PickerView:4.1.9',
+
+            "qiniu-android-sdk"            : 'com.qiniu:qiniu-android-sdk:7.3.13',
+
+            "dialogplus"                   : 'com.orhanobut:dialogplus:1.11@aar',
+            "filedownloader"               : 'com.liulishuo.filedownloader:library:1.7.6',
+
+            "switch-button"                : 'com.github.zcweng:switch-button:0.0.3@aar',
+            "zxingscanner"                 : 'com.mylhyl:zxingscanner:2.1.6',
+            "marqueeView"                  : 'com.sunfusheng:MarqueeView:1.4.1',
+            "glide-bitmap-pool"            : 'com.amitshekhar.android:glide-bitmap-pool:0.0.1',
+            "amap-location"                : 'com.amap.api:location:6.0.0',
+            "amap-search"                  : 'com.amap.api:search:8.1.0',
+            "easyblur"                     : 'com.github.pinguo-zhouwei:EasyBlur:v1.0.0',
+            'flowlayout'                   : 'com.hyman:flowlayout-lib:1.1.2',
+            'pswText'                      : 'com.github.maning0303:MNPasswordEditText:V1.0.3',
+            "recyclerview-animators"       : 'jp.wasabeef:recyclerview-animators:2.2.7',
+            "noober-background"            : 'com.noober.background:core:1.6.5',
+            "EZLedView"                    : 'com.github.goyourfly:EZLedView:-SNAPSHOT',
+            "banner"                       : 'cn.bingoogolapple:bga-banner:2.2.7',
+            "MagicIndicator"               : 'com.github.hackware1993:MagicIndicator:1.5.0',
+            "commons-csv"               : 'org.apache.commons:commons-csv:1.9.0',
+
+            "spannedlayoutmanager"         : 'com.arasthel:spannedgridlayoutmanager:3.0.2',
+            "flexboxlayoutmanager"         : 'com.google.android:flexbox:1.0.0',
+            "dashview"                     : 'com.fang:dashview:v1.0.0',
+            "BasePopup"                    : "com.github.razerdp:BasePopup:2.2.1",
+
+            "tencent_trtc"                 : 'com.tencent.liteav:LiteAVSDK_TRTC:9.5.11201',//8.4.9947  //8.5.10028
+            "round_layout"                 : 'com.jcminarro:RoundKornerLayouts:0.4.0',
+            "NumberPickerView"             : "cn.carbswang.android:NumberPickerView:1.1.0",
+            "viewpager2"                   : 'androidx.viewpager2:viewpager2:1.0.0',
+            "umsdk-common"                 : 'com.umeng.umsdk:common:9.4.0',// 必选
+            "umsdk-asms"                   : 'com.umeng.umsdk:asms:1.2.3',// 必选
+            "umsdk-apm"                    : 'com.umeng.umsdk:apm:1.3.1', // 错误分析升级为独立SDK，看crash数据请一定集成，可选
+            "umsdk-abtest"                 : 'com.umeng.umsdk:abtest:1.0.0',//使用U-App中ABTest能力，可选
+            "aliyun-oss"                   : 'com.aliyun.dpa:oss-android-sdk:2.9.5',
+            "EasyFloat"                    : 'com.github.princekin-f:EasyFloat:2.0.4',
+
+            "bobomeerecyclerviewhelper"    : 'com.bobomee.android:recyclerviewhelper:1.0.5',
+            "bobomeecommon"                : 'com.bobomee.android:common:1.4.9',
+
+            "gpuimage"                     : 'jp.co.cyberagent.android:gpuimage:2.1.0',
+            "pixelate"                     : 'io.uuddlrlrba:close-pixelate:1.2.0',
+            "agentweb-core"                : 'com.github.Justson.AgentWeb:agentweb-core:v5.0.0-alpha.1-androidx',
+            "agentweb-filechooser"         : 'com.github.Justson.AgentWeb:agentweb-filechooser:v5.0.0-alpha.1-androidx',
+            "agentweb-downloader"          : 'com.github.Justson:Downloader:v5.0.0-androidx',
+    ]
+}
+

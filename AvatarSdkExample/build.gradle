@@ -1,0 +1,39 @@
+apply from: "conf.gradle"
+
+buildscript {
+    ext.kotlin_version = '1.5.0'
+    repositories {
+        google()
+        maven { url "https://raw.githubusercontent.com/bj-jrxj/AvatarCloud_Android/main" }
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public' }
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+        maven { url 'https://repo1.maven.org/maven2/' }
+        maven { url "https://raw.github.com/laenger/maven-releases/master/releases" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.3'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:10.2.3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        maven { url "https://raw.githubusercontent.com/bj-jrxj/AvatarCloud_Android/main" }
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public' }
+        maven { url 'https://developer.huawei.com/repo/' }
+        maven { url "https://jitpack.io" }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/releases/' }
+        maven { url 'https://repo1.maven.org/maven2/' }
+        flatDir {
+            dirs project(":app").file("libs")
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

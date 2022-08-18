@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="InvalidImeActionId,SpUsage">
+
+    <View
+        android:id="@+id/cancleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rel_c" />
+
+    <com.noober.background.view.BLRelativeLayout
+        android:id="@+id/rel_c"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_alignParentBottom="true"
+        app:bl_corners_topLeftRadius="24dp"
+        app:bl_corners_topRightRadius="24dp"
+        app:bl_solid_color="@color/white"
+        app:bl_stroke_color="#FFC8CDDE"
+        app:bl_stroke_width="0dp">
+
+        <com.noober.background.view.BLTextView
+            android:id="@+id/btn_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#BAF94E"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:text="完成"
+            android:textSize="14sp"
+            app:bl_corners_radius="12dp"
+            app:bl_selected_solid_color="#111111"
+            app:bl_selected_textColor="@color/white"
+            app:bl_unSelected_solid_color="#111111"
+            app:bl_unSelected_textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/iv_demo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_above="@+id/lin_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:src="@mipmap/ic_demo_launcher" />
+
+        <com.noober.background.view.BLLinearLayout
+            android:id="@+id/lin_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="是否圆形:  "
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switch_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:sb_background="#818181"
+                    app:sb_checked="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="圆角度数:  "
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
+
+                <com.szjy.avatar.demo.ui.AmountView
+                    android:id="@+id/mAmountView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:btnTextSize="14sp"
+                    app:btnWidth="40dp"
+                    app:tvTextSize="8dp"
+                    app:tvWidth="80dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="图片宽度:  "
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
+
+                <com.szjy.avatar.demo.ui.AmountView
+                    android:id="@+id/avWidth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:btnTextSize="14sp"
+                    app:btnWidth="40dp"
+                    app:tvTextSize="8dp"
+                    app:tvWidth="80dp" />
+            </LinearLayout>
+        </com.noober.background.view.BLLinearLayout>
+
+    </com.noober.background.view.BLRelativeLayout>
+
+</RelativeLayout>

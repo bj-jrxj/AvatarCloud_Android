@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".DemoSplashActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/login_bg" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="187****0088"
+            android:textColor="#111111"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="+86"
+                android:textColor="#111111"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="14dp"
+                android:layout_toRightOf="@+id/tv_pt"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:text="18710200089"
+                android:textColor="#111111"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="#F4F4F4" />
+        </RelativeLayout>
+
+        <com.noober.background.view.BLTextView
+            android:id="@+id/tv_login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="20dp"
+            android:background="#BAF94E"
+            android:gravity="center"
+            android:text="登录"
+            android:textSize="14sp"
+            app:bl_corners_radius="12dp"
+            app:bl_selected_solid_color="#111111"
+            app:bl_selected_textColor="@color/white"
+            app:bl_unSelected_solid_color="#F0F0F0"
+            app:bl_unSelected_textColor="#999999" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp">
+
+            <com.noober.background.view.BLImageView
+                android:id="@+id/iv_agreement"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                app:bl_selected_drawable="@mipmap/default_small_pre"
+                app:bl_unSelected_drawable="@mipmap/default_small_nor" />
+
+            <TextView
+                android:id="@+id/tv_user_xy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:includeFontPadding="false"
+                android:text="我已阅读并同意《统一认证服务条款》和《用户协议》、《用户隐私协议》"
+                android:textColor="#8C8C8C"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

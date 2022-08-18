@@ -1,0 +1,56 @@
+<resources>
+
+    <style name="BottomSheetStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
+    </style>
+
+    <style name="BottomSheetStyle2" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
+        <item name="android:backgroundDimAmount">0.9</item>
+    </style>
+    <!-- ActionSheet进出动画 -->
+    <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/actionsheet_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/actionsheet_dialog_out</item>
+    </style>
+
+    <style name="BottomSheetStyle1" parent="BottomSheetStyle">
+        <!--        <item name="android:backgroundDimEnabled">false</item>-->
+        <!--        <item name="android:backgroundDimAmount">0.9</item>-->
+        <item name="android:backgroundDimAmount">0.9</item>
+    </style>
+
+    <style name="BottomSheetStyle3" parent="BottomSheetStyle">
+        <item name="android:backgroundDimEnabled">false</item>
+        <!--        <item name="android:backgroundDimAmount">0.9</item>-->
+    </style>
+    <style name="CommonBottomDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+    </style>
+    <style name="dialog_operate_message" parent="CommonBottomDialogStyle">
+        <item name="android:windowAnimationStyle">@style/dialog_anim_bottom</item>
+    </style>
+    <style name="dialog_anim_bottom" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/enter_bottom_menu</item>
+        <item name="android:windowExitAnimation">@anim/exit_bottom_menu</item>
+    </style>
+    <style name="custom_alertdialog_background" parent="@style/Theme.AppCompat.Light.Dialog.Alert" >
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+
+
+</resources>
