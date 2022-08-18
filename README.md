@@ -1,7 +1,9 @@
-# AvatarCloud_Android
-头像云 Android SDK
-
 # AvatarCloudSDK
+
+[![CI Status](https://img.shields.io/travis/bj-jrxj/AvatarCloudSDK.svg?style=flat)](https://travis-ci.org/bj-jrxj/AvatarCloudSDK)
+[![Version](https://img.shields.io/cocoapods/v/AvatarCloudSDK.svg?style=flat)](https://cocoapods.org/pods/AvatarCloudSDK)
+[![License](https://img.shields.io/cocoapods/l/AvatarCloudSDK.svg?style=flat)](https://cocoapods.org/pods/AvatarCloudSDK)
+[![Platform](https://img.shields.io/cocoapods/p/AvatarCloudSDK.svg?style=flat)](https://cocoapods.org/pods/AvatarCloudSDK)
 
 ---
 ## 介绍
@@ -15,8 +17,22 @@
 本平台所使用的头像及美术素材，均已签订协议并获得授权，平台内的头像可直接作为用户头像使用。如需二次编辑或衍生品开发，请联系[**云头像平台**](https://fc.faceface2.com)。
 
 
+### 需求痛点
+基本所有的应用都需要头像.  对于头像,大家的做法都是用户上传一张图片的方式, 如下图:
 
-* **具体内测申请流程请访问官网: https://fc.faceface2.com**
+![image](http://oss.faceface2.com/facecloud/pic/3ecaAa.jpeg)
+
+这样的体验方式,用户需要时刻在相册中保留一样图片,并记住在哪里.
+
+为什么没有一种方式,为用户提供很好看的头像, 直接让用户选择呢? 于是就有了该项目.
+
+### 云头像截图
+![image](http://oss.faceface2.com/facecloud/pic/6dd0f7fa-46f8-4782-9ac8-ce8d3fb49c82.png)
+![image](http://oss.faceface2.com/facecloud/pic/34612097-e78e-49b1-9347-2a2018fc95fe.png)
+![image](http://oss.faceface2.com/facecloud/pic/5ae8db45-e2b5-49aa-9199-2b9f91a6f4ec.png)
+
+### 申请流程
+ 请访问官网: https://fc.faceface2.com
 
 
 
@@ -26,9 +42,6 @@
 |云头像+一键登录|iOS|https://github.com/bj-jrxj/AvatarCloud-Login_iOS|[集成](https://github.com/bj-jrxj/AvatarCloud-Login_iOS)|
 |云头像|Android|https://github.com/bj-jrxj/AvatarCloud_Android|gradle集成|
 |云头像+一键登录|Android|https://github.com/bj-jrxj/AvatarCloud_Android/blob/main/README16.md|gradle集成|
-
-
-
 
 
 
